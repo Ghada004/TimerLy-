@@ -1,26 +1,25 @@
 <ion-content padding>
 
-  <ion-item color="dark">
+  <ion-item>
   <ion-label>Duration</ion-label>
   <ion-datetime display-format="mm:ss" placeholder="Tap here" [(ngModel)]="fullTime"></ion-datetime>
 </ion-item>
 
-  <circle-progress (click)="startTimer()"
+<circle-progress (click)="startTimer()"
 [percent]="percent"
 [maxPercent]="100"
 [radius]="radius"
 [showTitle]="false"
-[showSubtitle]="true"
+[showSubtitle]="false"
 [subtitle]="remainingTime"
-[subtitleFontSize]="20"
 [showUnits]="false"
-[outerStrokeWidth]="16"
-[outerStrokeColor]="'#7D83FF'"
+[outerStrokeWidth]="14"
+[outerStrokeColor]="'#D65DB1'"
 [showZeroOuterStroke]="false"
-[backgroundStroke]="'#223843'"
-[backgroundStrokeWidth]="3"
+[backgroundStroke]="'#D65DB1'"
+[backgroundStrokeWidth]="1"
 [outerStrokeGradient]="true"
-[outerStrokeGradientStopColor]="'#D4DCFF'"
+[outerStrokeGradientStopColor]="'#FF6F91'"
 [showInnerStroke]="false"
   ></circle-progress>
 
@@ -29,12 +28,12 @@
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
   <ng-container *ngIf="timer == false; else running">
     <ion-fab-button (click)="startTimer()">
-      <ion-icon name="play"></ion-icon>
+      <ion-icon color="light" name="play"></ion-icon>
     </ion-fab-button>
   </ng-container>
   <ng-template #running>
     <ion-fab-button (click)="stopTimer()">
-      <ion-icon name="square"></ion-icon>
+      <ion-icon color="light" name="square"></ion-icon>
       </ion-fab-button>
     </ng-template>
   </ion-fab>

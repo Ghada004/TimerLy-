@@ -40,7 +40,7 @@ export class HomePage {
     }
 
     this.timer = false;
-    this.prescent = 0;
+    this.percent = 0;
     this.progress = 0;
 
     let timeSplit = this.fullTime.split(':');
@@ -98,7 +98,7 @@ stopTimer() {
     s: '00',
   }
 
-  this.insomnia.allowSleepingAgin()
+  this.insomnia.allowSleepAgain()
 }
 
 }
